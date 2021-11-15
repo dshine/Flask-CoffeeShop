@@ -6,4 +6,18 @@
 {% block content %}
 <h1>Hello, About Page</h1>
 <p>Did you know that you are on the {{title}}</p>
+
+<div class="container">
+    <div class="row">
+        {% for coffee in coffees %}
+            <div class="col-md-3 text-center">
+                <img src="{{coffee.PicURL}}" class="rounded-circle img-fluid">
+                <h3>{{coffee.Title}}</h3>
+                <p><strong>{{coffee.Price}}</strong></p>
+                <p>{{coffee.Description}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
 {% endblock %}

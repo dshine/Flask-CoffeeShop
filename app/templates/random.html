@@ -1,0 +1,22 @@
+{% extends 'layout.html'%}
+
+{% block pagetitle %}
+{{title}}
+{% endblock %}
+
+{% block content %}
+<h1>Hello, Random Page</h1>
+
+<div class="container">
+    <div class="row">
+        {% for person in persons %}
+            <div class="col-md-3 text-center">
+                <img src="{{person.picture.large}}" class="rounded-circle">
+                <h3>{{person.gender}}</h3>
+                <p>{{person.name.first}} {{person.name.last}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
