@@ -5,6 +5,17 @@
 {% endblock %}
 
 {% block content %}
-<h1>Hello, Home Page</h1>
+    {% include 'partials/jumbotron.html' %}
+    <div class="container">
+        <div class="row">
+            {% include 'partials/carousel.html'%}
+        </div>
+        <div class="row">
+            {% for person in persons %}
+                    {% include 'partials/person.html'%}
+                {% endfor %}
+        </div>
+        
+    </div>
     {% include 'partials/jumbotron.html' %}
 {% endblock %}

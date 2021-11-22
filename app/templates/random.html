@@ -10,12 +10,11 @@
 <div class="container">
     <div class="row">
         {% for person in persons %}
-            <div class="col-md-3 text-center">
-                <img src="{{person.picture.large}}" class="rounded-circle">
-                <h3>{{person.gender}}</h3>
-                <p>{{person.name.first}} {{person.name.last}}</p>
-            </div>
+            {% include 'partials/person.html'%}
         {% endfor %}
+    </div>
+    <div class="row">
+        {% include 'partials/carousel.html'%}
     </div>
 </div>
 
